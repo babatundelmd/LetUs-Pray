@@ -1,0 +1,12 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #00fdff ;
+    height: 100vh;
+    overflow: hidden;
+    transition: .5s all ease-in-out;
+}

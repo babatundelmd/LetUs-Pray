@@ -1,0 +1,27 @@
+{
+  "name": "let_us_pray",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/babatundelmd/LetUs-Pray.git"
+  },
+  "keywords": [
+    "Pauline",
+    "Prayers",
+    "New Testament",
+    "Pauline Prayers",
+    "Believer",
+    "Pray"
+  ],
+  "author": "Babatunde Lamidi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/babatundelmd/LetUs-Pray/issues"
+  },
+  "homepage": "https://github.com/babatundelmd/LetUs-Pray#readme"
+}

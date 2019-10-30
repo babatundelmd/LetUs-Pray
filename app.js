@@ -1,14 +1,8 @@
+'use strict';
+
 const colorArray = ['#FF355E', '#FD5B78', '#FF6037', '#FF9966', '#FF9933', '#FFCC33', '#FFFF66', '#CCFF00', '#66FF66',
     '#AAF0D1', '#50BFE6', '#FF6EFF', '#EE34D2', '#FF00CC'];
 const app = document.querySelector('#app');
-
-app.addEventListener('click', (e) => {
-    e.preventDefault();
-    document.body.style.backgroundColor = colorArray[Math.floor(Math.random() * colorArray.length)];
-    findColor();
-})
-
-
 
 const colorArrayLib = {
     radicalRed: { Name: 'Radical Red', Hex: '#FF355E', darkHex: '#b00b2c' },
@@ -24,15 +18,28 @@ const colorArrayLib = {
     blizzardBlue: { Name: 'Blizzard Blue', Hex: '#50BFE6', darkHex: '' },
     shockingPink: { Name: 'Shocking Pink', Hex: '#FF6EFF', darkHex: '' },
     razzleDazzleRose: { Name: 'Razzle Dazzle Rose', Hex: '#EE34D2', darkHex: '' },
-    hotMagenta: { Name: 'Hot Magenta', Hex: '#FF00CC', darkHex: '' },
+    hotMagenta: { Name: 'Hot Magenta', Hex: '#FF00CC', darkHex: '' }
 };
+
+app.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.body.style.backgroundColor = colorArray[Math.floor(Math.random() * colorArray.length)];
+    findColor(colorArrayLib);
+})
 
 
 console.log({ colorArrayLib })
 
-const findColor = () => {
-    for (colorName in colorArrayLib) {
-        return console.log(colorArrayLib[colorName])
+const findColor = (obj) => {
+    for (let key in obj) {
+        // checking if it's nested
+        if (obj.hasOwnProperty(key) && (typeof obj[key] === "object")) {
+            findColor(obj[key])
+        } else {
+            // printing the flat attributes
+            console.log(key + " -> " + obj[key]);
+        }
     }
+
 }
 

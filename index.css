@@ -36,6 +36,25 @@ body{
 ._lupPrayStatus button:nth-child(even){
     margin-left: 14px;
     margin-right: 14px;
+    background: #4BC94D;
 
 }
 
+._lupPrayStatus button{
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 14px;
+    color: #fff;
+    background: rgb(17, 125, 197);
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+
+._lupPrayStatus button:hover{
+    transform:translateY(-5px) ;
+    transition: .5s all ease-in-out;
+    box-shadow: 0px 15px 20px rgba(184, 184, 184, 0.4);
+}

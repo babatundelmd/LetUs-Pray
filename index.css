@@ -8,5 +8,34 @@ body{
     background: #00fdff ;
     height: 100vh;
     overflow: hidden;
-    transition: .5s all ease-in-out;
+    transition: .2s all ease-in-out;
+    padding: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-rendering: optimizeLegibility;
 }
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+._lupTitleHeader h1{
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+
+._lupText p{
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+._lupPrayStatus {
+    /* padding: 14px; */
+}
+._lupPrayStatus button:nth-child(even){
+    margin-left: 14px;
+    margin-right: 14px;
+
+}
+

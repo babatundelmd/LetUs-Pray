@@ -21,15 +21,14 @@ const colorArrayLib = {
     hotMagenta: { Name: 'Hot Magenta', Hex: '#FF00CC', darkHex: '' }
 };
 
-app.addEventListener('click', (e) => {
-    e.preventDefault();
-    document.body.style.backgroundColor = colorArray[Math.floor(Math.random() * colorArray.length)];
-    findColor(colorArrayLib);
-})
 
+// app.addEventListener('mouseover', (e) => {
+//     e.preventDefault();
+//     document.body.style.backgroundColor = colorArray[Math.floor(Math.random() * colorArray.length)];
+//     findColor(colorArrayLib);
+// });
 
 console.log({ colorArrayLib })
-
 const findColor = (obj) => {
     for (let key in obj) {
         // checking if it's nested
@@ -37,9 +36,16 @@ const findColor = (obj) => {
             findColor(obj[key])
         } else {
             // printing the flat attributes
-            console.log(key + " -> " + obj[key]);
+            console.log([key + " -> " + obj[key]]);
         }
     }
 
 }
 
+
+const exe = (function () {
+    setInterval(() => {
+        document.body.style.backgroundColor = colorArray[Math.floor(Math.random() * colorArray.length)];
+        findColor(colorArrayLib);
+    }, 5000)
+})();
